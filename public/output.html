@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>Output</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="./css/output.css">
+</head>
+
+<body onload=secondfunction()>
+
+    <div class="output-main">
+        <h1 style="text-align:center"> Diagnosis </h1>
+        <div class="output-container">
+
+            <div class="label-container">
+                <div id="product-class" class="labels">
+                    <div class="face front">
+                        <p>Product Class</p>
+                    </div>
+                    <div class="face back">
+                        <img id='img-product' src="" alt="" />
+                        <p id="productClass"></p>
+                    </div>
+                </div>
+                <div id="type-class" class="labels">
+                    <div class="face front">
+                        <p>Type Class</p>
+                    </div>
+                    <div class="face back">
+                        <img id='img-type' src="" alt="" />
+                        <p id="typeClass"></p>
+                    </div>
+                </div>
+                <div id="sentiment" class="labels">
+                        <div class="face front">
+                            <p>Sentiment</p>
+                        </div>
+                    <div class="face back">
+                        <img id='img-sentiment' src="" alt="" />
+                        <p id="sentimentValue"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="response">
+                <p id="response"></p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function secondfunction() {
+            var url = document.location.href;
+            var params = url.split('?')[1].split('&'),
+                data = {}, tmp;
+            for (var i = 0, l = params.length; i < l; i++) {
+                tmp = params[i].split('=');
+                data[decodeURIComponent(tmp[0])] = decodeURIComponent(tmp[1]);
+            }
+            document.getElementById("productClass").innerHTML = data.complain_product_class;
+            document.getElementById("typeClass").innerHTML = data.complain_type_class;
+            document.getElementById("sentimentValue").innerHTML = data.sentiment;
+            document.getElementById("response").innerHTML = data.response;
+            document.getElementById("img-product").src = `./images/${data.complain_product_class}.png`;
+            document.getElementById("img-type").src = `./images/${data.complain_type_class}.png`;
+            document.getElementById("img-sentiment").src = `./images/${data.sentiment}.png`;
+        } 
+    </script>
+</body>
+
+</html>

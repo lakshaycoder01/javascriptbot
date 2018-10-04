@@ -1,0 +1,113 @@
+* {
+	font-family: cambria;    
+}
+
+.header{
+	width: 100%;
+	height:50px;
+	background :#fff;
+}
+
+.header .welcometxt{	
+	margin: 15px 80px 3px ;
+    float: right;
+	color: #831f1f;
+	font-size: 20px;
+}
+
+.header #login{
+	position : absolute;
+    right: 20px;
+    top: 20px;
+	height: 30px;
+	width: 30px;
+	border-radius:50%;
+	cursor: pointer;
+}
+ 
+.inputpane {
+    width: 100%;
+    height : 655px;
+    text-align: center;
+    opacity: 0.75;
+    background-image:url('../img/bg.jpg');
+	background-size: cover;
+ }
+ 
+  .dummy{
+    margin: 20px 0 0 10px;
+    float: left;
+    color:  #fff;
+    background-color: #D2E3F5;
+ }
+ 
+.urlpane{
+	height:100%;
+	width: 100%;
+	float:left;
+	background-image:url('../img/loading.gif');
+}
+
+#plugin{
+    height: 82%;
+    width: 25%;
+    background: teal;
+    color:#fff;
+    padding: 50px;
+    font-size: 16px;
+    overflow-y: scroll;
+}
+
+#plugin::-webkit-scrollbar{
+	width: 10px;	
+}
+
+#plugin::-webkit-scrollbar-thumb{
+	border-radius: 5px;
+	background: rgba(10, 36, 232, 0.4);
+	
+}
+
+.chatbox {       
+	position: fixed;   
+	right: 25px;
+	bottom: 0; 
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+	overflow: hidden;
+}
+.chatbox-view {
+    transform: translateY(0);
+	bottom: 70px;
+}
+
+.closeUrl img{
+	position : absolute;
+    right: 40px;
+    top: 75px;
+	height: 30px;
+	width: 30px;
+	border-radius:50%;
+	cursor: pointer;
+	display: none;
+}
+
+.bottom-bar {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(62, 69, 80, 0.86);
+	float: left;
+}
+
+.bottom-bar .btnBOT {
+	position : absolute;
+	display: none;
+    right: 25px;
+    bottom: 5px;
+}
+
+#click-a img{	
+	border-radius: 50%;
+	cursor: pointer;
+}
+

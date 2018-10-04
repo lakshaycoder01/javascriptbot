@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>iBOT Your Friend From Bank</title>
+        
+        <meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/botstyle.css">
+		
+        <script src="dependencies/jquery-1.11.1.min.js"></script>
+        <script src="dependencies/jquery.min.js"></script>
+        <script src="dependencies/typewrite.js"></script>
+        <script src="scripts/plugin.js"></script>
+        <script src="scripts/datagrid.js"></script>			 
+        <script src="scripts/botcore.js"></script>
+		      
+    </head>
+	
+    <body>
+        <div class="header">  
+                    <p class="welcometxt" ></p>
+                    <img src="img/logo-Intellect_Design.jpg" height="40" style="padding-right:50px;"><img src="img/h1.png" height="50"><img src="img/h2.png" height="50"><img src="img/h3.png" height="50">
+                    <a class="login" ><img id='login' src="img/logout.png" ></a>
+        </div>
+        
+            <!--LOGIN POP UP-->
+            <div id="modal-wrapper" class="modal">
+                <div class="modal-content animate" >
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+	  <img src="img/login-avatar.png" alt="Avatar" class="avatar">
+                        <h1 style="text-align:center">Welcome To Intellect</h1>
+                    </div>
+                    <div class="container">
+                        <input class="sessiontxt" id="textLogin" type="text" placeholder="Enter Username" name="uname">
+                        <input id="pwdLogin" type="password" placeholder="Enter Password" name="psw">        
+	<button class="btnLogin" onclick="document.getElementById('modal-wrapper').style.display='none'">Login</button></br>		  
+                    </div>
+			
+	<input type="checkbox" style="margin-top:20px;"> Remember me      
+	<a href="#" style="margin-top:20px; float:right;" >Forgot Password ?</a>
+			
+                </div>
+	  
+        </div>		
+		
+        <div id= 'inputpane' class="inputpane"></div>
+        <div id='closeUrl'><a class="closeUrl"><img id="closeTab" src="img/close1.png"></a></div>
+		
+        <div class="chatbox">
+                    <div class="chatlogs"> </div>				
+                    <div class="chat-form"><textarea class="chattxt"></textarea> </div>		
+        </div>
+		
+        <div class="bottom-bar">
+            <div class="btnBOT"> <a id="click-a" class="burger"><img src="img/bot.png" height="40" width="40" ></a> </div>
+        </div>
+        
+    </body>
+</html>

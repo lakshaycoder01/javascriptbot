@@ -1,0 +1,8 @@
+ sOFTWARE REQUIREMENT :
+	
+	1. 	node.js v8.1.4
+	2.	elasticsearch v5.5.1
+	3.	mongodb v3.4.7
+	4.	google chrome v62.0.3202.94
+
+

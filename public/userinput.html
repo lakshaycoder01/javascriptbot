@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>iBOT Your Friend From Bank</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="./css/userinput.css">
+
+</head>
+
+
+<body background="./images/notepad.jpg">
+    <div class="input-main" id='modal-wrapper'>
+        <input class="emailInput" id="emailInput" rows="1" type="text" placeholder="Please Enter Your Email Here..."
+            name="email" />
+        <input class="txtInput" id="txtInput" rows="5" type="text" placeholder="Comments..." name="data" />
+        <button type="button" id="btnHelp" onclick=myFunction()>Submit</button>
+
+    </div>
+
+    <script>
+        function myFunction() {
+            var email = document.getElementById('emailInput').value;
+            var data = document.getElementById('txtInput').value;
+            fetch(`https://4b82d494.ngrok.io`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ "msg": data, "from": email })
+            }).then(response => {
+                return (response.json());
+            }).then(data => {
+                let query = serialize(data);
+                let url = 'http://localhost:5000/output?' + query;
+                document.location.href = url;
+            })
+        }
+        serialize = function (obj) {
+                var str = [];
+                for (var p in obj)
+                    if (obj.hasOwnProperty(p)) {
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    }
+                return str.join("&");
+            }
+
+    </script>
+</body>
+
+</html>

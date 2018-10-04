@@ -1,0 +1,97 @@
+
+
+/* The Modal (background) */
+.modal {
+	display:none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 350px; 
+	padding: 20px;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 15px 0 12px 0;
+    position: relative;
+}
+.avatar {
+    width: 100px;
+	height:100px;
+    border-radius: 50%;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.container{
+	text-align: center;
+}
+
+#textLogin {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 26px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	font-size:16px;
+}
+
+#pwdLogin {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 26px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	font-size:16px;
+}
+
+.btnLogin{
+	background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    margin: 8px 26px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+	font-size:20px;
+}
+
+.btnLogin:hover{
+	opacity : 0.8;
+}
+
+
+/* Add Zoom Animation */
+.animate {
+    animation: zoom 0.6s
+}
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
